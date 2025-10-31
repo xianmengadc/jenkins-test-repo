@@ -26,12 +26,6 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Checkout') {
-            steps {
-                echo '✅ 开始从GitHub拉取代码...'
-                checkout scm
-            }
-        }
         stage('Install & Test') {
             steps {
                 echo '🔧 安装依赖和运行测试...'
