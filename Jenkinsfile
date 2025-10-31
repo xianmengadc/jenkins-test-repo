@@ -18,12 +18,6 @@ pipeline {
         )
     }
     stages {
-       stage('Parameters') {
-            steps {
-                echo "部署环境: ${params.DEPLOY_ENV}"
-                echo "运行测试: ${params.RUN_TESTS}"
-            }
-        }
         stage('Checkout') {
             steps {
                 echo '✅ 开始从GitHub拉取代码...'
