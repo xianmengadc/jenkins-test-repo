@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    
     parameters {
         choice(
             name: 'DEPLOY_ENV',
@@ -17,6 +18,7 @@ pipeline {
             description: '输入版本号'
         )
     }
+    
     stages {
         stage('Checkout') {
             steps {
