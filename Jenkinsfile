@@ -18,12 +18,10 @@ pipeline {
         )
     }
     stages {
-        stage('Parameters Display') {
+       stage('Parameters') {
             steps {
-                echo "🎯 构建参数信息："
                 echo "部署环境: ${params.DEPLOY_ENV}"
                 echo "运行测试: ${params.RUN_TESTS}"
-                echo "版本号: ${params.VERSION}"
             }
         }
         stage('Checkout') {
